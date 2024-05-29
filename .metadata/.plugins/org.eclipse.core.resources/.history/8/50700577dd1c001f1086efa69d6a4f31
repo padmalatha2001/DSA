@@ -1,0 +1,14 @@
+package list;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class MegingLists {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Integers[] a= {3,6,4,9};
+       List<Integers> li=Arrays.asList(a);
+	}
+
+}

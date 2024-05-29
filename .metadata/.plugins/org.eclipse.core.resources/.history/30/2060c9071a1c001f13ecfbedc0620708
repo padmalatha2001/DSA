@@ -1,0 +1,19 @@
+package patterns;
+
+import java.util.stream.IntStream;
+
+public class Pattern20 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        IntStream.rangeClosed(1, 5).forEach(row->{
+        	IntStream.rangeClosed(1,5).forEach(col->{
+        		if(row==col||col==5-row+1) {
+        			System.out.print("* ");
+        		}
+        	});
+        	System.out.println();
+        });
+	}
+
+}

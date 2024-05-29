@@ -1,0 +1,38 @@
+package patterns;
+
+import java.util.stream.IntStream;
+
+public class Pattern2 {
+
+	public static void main(String[] args) {
+		
+		int currentPrime=2;
+
+		IntStream.rangeClosed(1, 5).forEach(row->{
+			IntStream.rangeClosed(1, row).forEach(col->{
+				System.out.print(currentPrime+" ");
+				currentPrime=getNextPrime(currentPrime);
+			});
+		});
+	}
+
+	private static int getNextPrime(int currentPrime) {
+		// TODO Auto-generated method stub
+		int k=currentPrime++;
+		boolean f=true;
+		while(f) {
+			int c=0;
+		  for(int i=2;i<=Math.sqrt(k);i++)
+		  {
+			if(k%i==0)
+				c++;
+		  }
+		  if(c==0) {
+			  f=false; 
+		  }
+		  else
+			 k++;
+		}
+		 return k;
+	}
+}

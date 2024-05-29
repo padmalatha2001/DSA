@@ -1,0 +1,70 @@
+package dsa.binarytree;
+
+public class BinaryTree {
+
+	 private TreeNode root;
+	 private class TreeNode{
+		 private int data;
+		 private TreeNode left;
+		 private TreeNode right;
+		 
+		 public TreeNode(int data) {
+			 this.data=data;
+		 }
+	 }
+	 
+	 private TreeNode createTree() {
+		 TreeNode first=new TreeNode(1);
+		 TreeNode second=new TreeNode(2);
+		 TreeNode third=new TreeNode(3);
+		 TreeNode fourth=new TreeNode(4);
+		 TreeNode fifth=new TreeNode(5);
+		 TreeNode six=new TreeNode(6);
+		 
+		 this.root=first;
+		 first.left=second;
+		 first.right=third;
+		 second.left=fourth;
+		 second.right=fifth;
+		 third.left=six;
+		 
+		 return root;
+		 
+	 }
+	 
+	 public void preOrderTraversal(TreeNode root) {
+		 if(root==null)
+			 return;
+		 TreeNode temp=root;
+		 System.out.print(temp.data+" ");
+		 preOrderTraversal(temp.left);
+		 preOrderTraversal(temp.right);
+	 }
+	public void inOrderTraversal(TreeNode root) {
+		 if(root==null)
+			 return;
+		TreeNode temp=root;
+		inOrderTraversal(temp.left);
+		System.out.print(temp.data+" ");
+		inOrderTraversal(temp.right);
+	}
+	public void postOrderTraversal(TreeNode root) {
+		 if(root==null)
+			 return;
+		TreeNode temp=root;
+		postOrderTraversal(temp.right);
+		postOrderTraversal(temp.left);
+		System.out.print(temp.data+" ");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        BinaryTree binaryTree=new BinaryTree();
+        TreeNode node=binaryTree.createTree();
+        binaryTree.preOrderTraversal(node);
+        System.out.println();
+        binaryTree.inOrderTraversal(node);
+        System.out.println();
+        binaryTree.postOrderTraversal(node);
+	}
+
+}

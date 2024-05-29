@@ -1,0 +1,21 @@
+package patterns;
+
+import java.util.Scanner;
+import java.util.stream.IntStream;
+
+public class Pattern18 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       Scanner scanner=new Scanner(System.in);
+       System.out.println("Enter no.of rows");
+       int n=scanner.nextInt();
+       int mid=n/2;
+       IntStream.rangeClosed(1, n).forEach(row->{
+    	   IntStream.rangeClosed(1,row).forEach(col->{
+    		  System.out.print("* "); 
+    	   });
+       });
+	}
+
+}

@@ -1,0 +1,27 @@
+package list;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Practice {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("one");
+        list.add("two");
+        list.add("three");
+
+        // Create an iterator
+        Iterator<String> iterator = list.iterator();
+
+        // Iterate over the list
+        while (iterator.hasNext()) {
+            String element = iterator.next();
+            if (element.equals("two")) {
+                // Direct modification of the list during iteration
+                list.add(element);  // This will throw ConcurrentModificationException
+            }
+        }
+
+        System.out.println(list);  // This line will not be reached
+    }
+}

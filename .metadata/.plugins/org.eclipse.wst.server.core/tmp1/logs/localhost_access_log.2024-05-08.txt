@@ -1,0 +1,8 @@
+127.0.0.1 - - [08/May/2024:15:20:40 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [08/May/2024:15:22:14 +0530] "GET /student-servlet/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [08/May/2024:15:22:14 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [08/May/2024:15:26:34 +0530] "GET /student-servlet/student?sql=insert&name=John&branch=Computer&cgpa=8.5 HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [08/May/2024:15:29:06 +0530] "GET /student-servlet/student?sql=update&id=1&name=John&branch=computer&cgpa=8 HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [08/May/2024:15:31:31 +0530] "GET /student-servlet/student?sql=insert&name=Radha&branch=mech&cgpa=8.5 HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [08/May/2024:15:32:09 +0530] "GET /student-servlet/student?sql=get&id=1 HTTP/1.1" 200 53
+0:0:0:0:0:0:0:1 - - [08/May/2024:15:39:53 +0530] "GET /student-servlet/student?sql=get&id=4 HTTP/1.1" 200 4

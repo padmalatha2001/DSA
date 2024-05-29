@@ -1,0 +1,14 @@
+package list;
+
+import java.util.List;
+
+public class CommonElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<Integer> l1=List.of(2, 5, 5, 7, 8);
+		List<Integer> l2=List.of(1, 2, 3, 5, 9);
+	}
+
+}

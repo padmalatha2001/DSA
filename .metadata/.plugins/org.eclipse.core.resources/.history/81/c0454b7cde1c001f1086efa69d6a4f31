@@ -1,0 +1,32 @@
+package list;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+public class MegingLists {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+ 
+       List li=Arrays.asList(1,3,6,7);
+       List l1=Arrays.asList(2,4,5);
+       
+       Iterator itr=li.iterator();
+       Iterator it=l1.iterator();
+       List<Integer> merge=new ArrayList<>();
+       while(itr.hasNext()&&it.hasNext()) {
+    	   int l=(int) itr.next();
+    	   int r=(int) itr.next();
+    	   if(l<r)
+    		   merge.add(l);
+    	   else
+    		  merge.add(r);
+       }
+       while(itr.hasNext()){
+    	   
+       }
+	}
+
+}
